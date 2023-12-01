@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --main-color : #1E7FCB;
+    --second-color : #0F3F65;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+}
+
+img {
+    height: 20px;
+}
+.btn_add,
+.btn_list {
+    width: fit-content;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    text-align: 0;
+    text-decoration: none;
+    margin: 20px 0;
+    transition: all 500ms ease-in-out;
+}
+
+.btn_add > img,
+.btn_list > img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+.container {
+    padding: 10px 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    border: 2px solid var(--second-color);
+    background: #fff;
+}
+legend {
+    color: var(--second-color);
+  }
+
+  .btn_add:hover,
+  .btn_list:hover{
+    background-color: var(--second-color);
+  }
+
+
+/* Views / liste.demande.html */
+/* Styles pour l'en-tête de tableau */
+thead {
+    background-color: #fff;
+}
+
+/* Styles pour le tableau */
+table {
+    /* border-collapse: collapse; */
+    margin: 15px 0;
+    /* width: 100%; Utilise toute la largeur disponible */
+
+}
+
+/* Styles pour les cellules d'en-tête */
+th {
+    padding: 8px; /* Ajustement pour une meilleure lisibilité */
+    border-right: 2px solid #717070;
+    border-radius: 5px;
+}
+
+/* Styles pour les lignes de corps de tableau */
+tbody {
+    background-color: #f1f1f1;
+}
+
+/* Styles pour les lignes impaires du corps de tableau */
+tbody> tr:not(:nth-child(2n)){
+    background-color: #ccc;
+    border-top: 2px solid #717070;
+    border-bottom: 2px solid #717070;
+}
+
+/* Styles pour les cellules du corps de tableau */
+td {
+    padding: 8px 20px; /* Ajustement pour une meilleure lisibilité */
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Styles pour la première cellule de chaque ligne */
+tr > td:nth-child(1) {
+    letter-spacing: 2px;
+}
+
+/* Styles pour la zone de filtre (div contenant les listes déroulantes) */
+.filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px; /* Ajustement pour espacement en bas */
+}
+
+/* Styles pour les zones d'état et de type */
+.etat, .type {
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0.3);
+    display: grid;
+    grid-template-columns: subgrid;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+/* Styles pour les listes déroulantes */
+select {
+    text-align: center;
+    outline: 0;
+    width: 80%;
+}
+
+/* Styles pour les listes déroulantes lorsqu'elles sont en focus */
+select:focus{
+    outline: 0;
+}
+
+/* Styles pour les options des listes déroulantes */
+select > option {
+    background-color: #1E7FCB;
+    color: #fff;
+}
+
+/* Styles pour les options sélectionnées des listes déroulantes */
+select > option:checked {
+    background-color: var(--second-color);
+}
+
+/* Styles pour les options des listes déroulantes lorsqu'elles sont survolées */
+option:hover {
+    background: var(--main-color);
+}
+
+
+/* Faire de demande add.demande.html.php */
+
+.container_3{
+    width: fit-content;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width: 300px;
+    border-radius: 6px;
+}
+h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    padding: 10px 25px;
+}
+.content > div {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.type_2 > select {
+    width: 100%;
+    padding: 5px 8px;
+    text-align: center;
+    font-size: 17px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.type_2 > select {
+    border-radius: 0;
+}
+
+.type_2 > select:focus {
+    outline: 0;
+}
+
+.motif > input {
+    width: 100%;
+    outline: 0;
+    padding: 2px 5px;
+}
+
+.motif {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.date > input {
+    width: 100%;
+    padding: 5px 8px;
+    text-align: center;
+    font-size: 17px;
+}
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.controls > input {
+    flex: 1;
+    padding: 8px 0;
+    background-color: var(--main-color);
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 350ms ease-in-out;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.controls > input:hover {
+    background-color: var(--second-color);
+}
+
+.btn_back {
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    text-decoration: none;
+    text-align: 0;
+    margin: 5px;
+    background-color: #fff;
+    color: var(--main-color);
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    padding: 2px 5px;
+}
+
+.btn_back > img {
+    height: 20px;
+    margin-right: 10px;
+    filter: grayscale();
+}
